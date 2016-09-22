@@ -1,0 +1,17 @@
+
+<div data-module="repeatElement"
+     data-repeat-on="applicant in applicants"
+     data-repeat-data="/api/applicants"
+     class="applicantList">
+
+        <div class="js-toggle applicantList--name">{applicant.name}</div>
+        <div class="js-toggle applicantList--email">{applicant.email}</div>
+
+        <div data-if="{applicant.shortListed}">
+          <div class="applicant--shortlist js-true">Short Listed</div>
+          <div class="applicant--notShortlist js-false">No Decision Made</div>
+        </div>
+
+        <a class="applicantList--profileLink"
+          data-href="/applicants/{applicant.id}">Applicant Profile</a>
+</div>

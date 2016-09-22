@@ -1,0 +1,28 @@
+.container {
+  @extend %site-width-container;
+  margin: auto;
+  @include _core-font-generator();
+
+}
+
+.applicantList {
+  background: #fff;
+  min-height: 13vh;
+  margin: 15px;
+  padding: 5px 15px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 5px 6px -5px rgba(0,0,0,0.3);
+  border-left: 7px $home-office-websafe solid;
+}
+
+.applicantList--profileLink {
+  color: $link-colour;
+  @include _core-font-generator(12px)
+  &:hover {
+    color: $link-hover-colour;
+  }
+}
+.applicantList--email {
+  color: $link-colour;
+  @include _core-font-generator(12px)
+}

@@ -1,0 +1,26 @@
+
+header {
+  background: $black;
+  color: $white;
+  min-height: 15vh;
+}
+
+.header_wrapper {
+  @extend %site-width-container;
+}
+
+.header--title {
+    @include _core-font-generator(40px);
+    color: $white;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    &:hover {
+      border-bottom: solid 2px $white;
+    }
+}
+
+
+%shortlist-buttons {
+
+}

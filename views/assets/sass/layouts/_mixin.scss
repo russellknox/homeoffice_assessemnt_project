@@ -1,0 +1,7 @@
+%applicant--shortlistButton {
+   display: inline-block;
+   padding: 4px;
+   margin: 1px auto;
+   @include _core-font-generator(12px);
+   cursor: pointer;
+}

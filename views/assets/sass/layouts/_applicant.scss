@@ -1,0 +1,52 @@
+.applicant {
+  width: 90%;
+  margin: auto;
+}
+.applicant--name {
+  @include _core-font-generator(26px);
+  border-bottom: 4px solid $mainstream-brand;
+  color: $black
+}
+.applicant--dob {
+  @include _core-font-generator(18px);
+  color: $secondary-text-colour
+}
+.applicant--shortlist {
+ background: $button-colour;
+ @extend %applicant--shortlistButton;
+ color: $white;
+}
+
+.applicant--notShortlist {
+  background: $red;
+  @extend %applicant--shortlistButton;
+  color: $white;
+}
+.applicant--unShortlist {
+  @extend %applicant--shortlistButton;
+  color: $mainstream-brand;
+  font-style: italic;
+}
+
+.applicant--link {
+    color: $link-colour;
+    @include _core-font-generator(12px)
+    &:hover {
+      color: $link-hover-colour;
+    }
+}
+
+.applicant_workhistory {
+  margin: 10px;
+  @include _core-font-generator(12px)
+}
+#applicant_workhistory:checked + .applicant_workhistory {
+  display: block;
+}
+.applicant_workhistor--positionHeld {
+  margin: 5px auto;
+  color: $mainstream-brand;
+}
+.applicant_workhistor--dates {
+  font-style: italic;
+}

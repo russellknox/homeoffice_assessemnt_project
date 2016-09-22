@@ -1,0 +1,29 @@
+<div class="applicant">
+
+  <p class="applicant--name">{{applicant.name}}</p>
+
+  <p class="applicant--dob">DOB: {{applicant.dob}}</p>
+
+  {{#if applicant.shortListed}}
+    <p class="applicant--shortlist">Shortlisted</p>
+    <span data-id={{applicant.id}} class="applicant--unShortlist js-shortList">Un Shortlist</span>
+    {{else}}
+    <p data-id={{applicant.id}} class="applicant--notShortlist js-shortList">Click to Shortlist</p>
+  {{/if}}
+
+
+  <div class="applicant_workhistory">
+    <div>Work History</div>
+    {{#each applicant.workHistory}}
+      <h3 class="applicant_workhistor--positionHeld">{{positionheld}}</h3>
+      <div class="applicant_workhistor--dates">{{dateFrom}} to {{dateTo}}</div>
+      <ul>
+        {{#each duties}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/each}}
+  </div>
+
+  <a class="applicant--link" href="/applicants">Back To All Candiates</a>
+</div>

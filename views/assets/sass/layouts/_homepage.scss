@@ -1,0 +1,40 @@
+.landingPage {
+  margin: 0;
+}
+
+.landingPage--applicants {
+  float: left;
+  @include _core-font-generator(30px)
+  color: $white;
+  width: 100%;
+  height: 42.5vh;
+  background: $mainstream-brand;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.shortlisted {
+  background: $grey-1;
+}
+
+.landingPage--text {
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 15%;
+  a {
+    color: $white;
+  }
+}
+.landingPage--number {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+
+}
+
+@media screen and (min-width: 700px) {
+  .landingPage--applicants {
+    width: 50%;
+    height: 85vh;
+  }
+}
