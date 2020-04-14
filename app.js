@@ -8,6 +8,7 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+//TODO remove handlebars
 app.engine('handlebars', hbs({defaultLayout: 'index'}))
 app.set('view engine', 'handlebars')
 
